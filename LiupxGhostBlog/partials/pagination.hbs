@@ -1,0 +1,22 @@
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    {{#if prev}}
+                    <a href="{{page_url prev}}" class="left">
+                        <button class="btn-floating">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        <div class="ripple-container"></div></button>
+                        上一篇                    
+                    </a>
+                    {{else}}
+                    {{/if}}
+                    {{#if next}}
+                    <a href="{{page_url next}}" class="right">
+                        下一篇
+                        <button class="btn-floating">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                    {{else}}
+                    {{/if}}
+                </div>
+            </div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{!Responsive and meta tags}}
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#36688a">
+        {{!Title and description}}
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+        {{!CSS}}
+        <link type="text/css" rel="stylesheet" href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
+        <link type="text/css" rel="stylesheet" href="{{asset "assets/css/style.css"}}" media="screen,projection"> 
+	<link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdn.staticfile.org/highlight.js/9.8.0/styles/solarized-dark.min.css" rel="stylesheet"> 
+        {{! Social Meta Tags If you need..}}
+        {{! Ghost header injection }}
+        {{ghost_head}}
+    </head>
+    <body class="{{body_class}}">
+       
+        {{!Sidenav and Navbar}}
+        <nav id="nav-trans" class="transparent">
+            <a href="{{@blog.url}}" class="brand-logo center">{{@blog.title}}</a>
+            <div id="slide-out" class="side-nav fixed">
+                <div class="navwrapper container">  
+                    <h1 id="nav-head">{{@blog.title}}</h1>
+                    <p class="blue-grey-text text-lighten-4">{{@blog.description}}</p>
+                    <a href="{{@blog.url}}"><i class="fa fa-book" aria-hidden="true" style="color: #fff;text-align: center;font-size:4.5rem;"></i></a>
+                    <a href="https://www.liupx.com"><i class="fa fa-home" aria-hidden="true" style="color: #fff;text-align: center;font-size:4.5rem;"></i></a>
+                    <div class="navmenu-social">
+                        <a href="https://www.facebook.com/liupx666" class="btn-floating">
+                            <i class="fa fa-facebook" aria-hidden="true" ></i>
+                        </a>
+                        <a href="https://twitter.com/Withyou_hope" class="btn-floating">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://weibo.com/liupengxu1993" class="btn-floating">
+                            <i class="fa fa-weibo" aria-hidden="true"></i>
+                        <a href="https://github.com/liupx" class="btn-floating">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" data-activates="slide-out" class="button-collapse">
+                <i class="fa fa-reorder" aria-hidden="true"></i>
+            </a>
+        </nav>
+        {{! Content }}
+        {{{ body }}}
+        {{!footer}}
+        <footer class="page-footer blue-grey darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12 white-text">
+                        <h4>{{@blog.title}}</h4>
+                        <p>{{@blog.description}}</p>
+                    </div>
+                    <div class="col l6 s12 white-text">
+                        <h4>About </h4>
+                        <p>LIUPX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                
+                    <div class="right">
+                     
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        {{!Script}}
+        <script src="https://cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="{{asset "js/script.min.js"}}"></script>
+	 <script src="https://cdn.staticfile.org/highlight.js/9.8.0/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+        {{! Ghost body injection }}
+        {{ghost_foot}}
+	{{!backToTop}}
+	<div id="full" style="background-color:#36688a;border-radius: 0.45em;opacity: 0.8;width:40px; height:40px; position:fixed; right:20px; 
+		    bottom:50px; margin-left:0px; margin-bottom:0px; z-index:100; text-align:center; cursor:pointer;">
+		  <a>
+		    <i class="fa fa-angle-up" style="font-size:35px;outline:none;color: #fff;text-align: center;"></i>
+		  </a>
+	</div>
+	<script type="text/javascript">
+		  var isie6 = window.XMLHttpRequest ? false: true;
+		  function newtoponload() {
+		    var c = document.getElementById("full");
+		    function b() {
+		      var a = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+		      if (a > 0) {
+		        if (isie6) {
+		          c.style.display = "none";
+		          clearTimeout(window.show);
+		          window.show = setTimeout(function() {
+		            var d = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+		            if (d > 0) {
+		              c.style.display = "block";
+		              c.style.top = (400 + d) + "px"
+		            }
+		          },
+		          300)
+		        } else {
+		          c.style.display = "block"
+		        }
+		      } else {
+		        c.style.display = "none"
+		      }
+		    }
+		    if (isie6) {
+		      c.style.position = "absolute"
+		    }
+		    window.onscroll = b;
+		    b()
+		  }
+		  if (window.attachEvent) {
+		    window.attachEvent("onload", newtoponload)
+		  } else {
+		    window.addEventListener("load", newtoponload, false)
+		  }
+		  document.getElementById("full").onclick = function() {
+		    window.scrollTo(0, 0)
+		  };
+	</script>
+
+    </body>
+</html>
