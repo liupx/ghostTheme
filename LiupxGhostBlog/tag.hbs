@@ -41,10 +41,10 @@
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" class="btn-floating fb" data-width="580" height="235">
                                 <i class="fa fa-facebook" aria-hidden="true" style="color: #fff;text-align: center;font-size:3rem;"></i>
                             </a>
-                            <a href="https://twitter.com/intent/tweet?text={{encode title}} from www.liupx.me&amp;url={{url absolute="true"}}" class="btn-floating tw" data-width="580" height="235">
+                            <a href="https://twitter.com/intent/tweet?text=[{{encode title}}] tags:{{#foreach tags}}[{{encode name}}]{{/foreach}}&amp;url={{url absolute="true"}}" class="btn-floating tw" data-width="580" height="235">
                                 <i class="fa fa-twitter" aria-hidden="true" style="color: #fff;text-align: center;font-size:3rem;"></i>
                             </a>
-                            <a href="http://service.weibo.com/share/share.php?url={{url absolute="true"}}&amp;title={{encode title}} 分享自:www.liupx.me" class="btn-floating gp" data-width="580" height="235">
+                            <a href="http://service.weibo.com/share/share.php?url={{url absolute="true"}}&amp;title=【{{encode title}}】 标签:{{#foreach tags}}【{{encode name}}】{{/foreach}} 来自:www.liupx.me{{url}}" class="btn-floating gp" data-width="580" height="235">
                                 <i class="fa fa-weibo" aria-hidden="true" style="color: #fff;text-align: center;font-size:3rem;"></i>
                             </a>
                             <a class="waves-effect waves-light btn right" href="{{url}}">查看全文</a>
