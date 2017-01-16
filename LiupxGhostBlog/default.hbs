@@ -29,18 +29,18 @@
                 <div class="navwrapper container">  
                     <h1 id="nav-head">{{@blog.title}}</h1>
                     <p class="blue-grey-text text-lighten-4">{{@blog.description}}</p>
-                    <a href="https://www.liupx.com"><i class="fa fa-home" aria-hidden="true" style="color: #fff;text-align: center;font-size:4.5rem;"></i></a>
+                    <a href="https://www.liupx.com" target="_blank"><i class="fa fa-home" aria-hidden="true" style="color: #fff;text-align: center;font-size:4.5rem;"></i></a>
                     <a href="{{@blog.url}}"><i class="fa fa-book" aria-hidden="true" style="color: #fff;text-align: center;font-size:4.5rem;"></i></a>
                     <div class="navmenu-social">
-                        <a href="https://www.facebook.com/liupx666" class="btn-floating">
+                        <a href="https://www.facebook.com/liupx666" target="_blank" class="btn-floating">
                             <i class="fa fa-facebook" aria-hidden="true" ></i>
                         </a>
-                        <a href="https://twitter.com/liupx666" class="btn-floating">
+                        <a href="https://twitter.com/liupx666" target="_blank" class="btn-floating">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
-                        <a href="https://weibo.com/liupengxu1993" class="btn-floating">
+                        <a href="https://weibo.com/liupengxu1993" target="_blank" class="btn-floating">
                             <i class="fa fa-weibo" aria-hidden="true"></i>
-                        <a href="https://github.com/liupx" class="btn-floating">
+                        <a href="https://github.com/liupx" target="_blank" class="btn-floating">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
 			<a class="btn-floating search-toggle" href="#search">
@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12 white-text">
-                        <a href="https://www.liupx.me">{{@blog.title}}</a>
+                        <a href="https://www.liupx.me" target="_blank">{{@blog.title}}</a>
                         <p>{{@blog.description}}</p>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
 	<script>
 	var today = new Date();
 	var year = today.getFullYear();
-	document.getElementById("liupxCopyRight").innerHTML="Copyright &copy "+year+" <a href='liupx'>LIUPX</a>. All Rights Reserved";
+	document.getElementById("liupxCopyRight").innerHTML="Copyright &copy "+year+" <a href='https://www.liupx.com' target='_blank'>LIUPX</a>. All Rights Reserved";
 	</script>
         {{! Ghost body injection }}
         {{ghost_foot}}
